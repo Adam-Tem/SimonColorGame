@@ -5,7 +5,7 @@ sequence = createSequence()
 matching = True
 score = 0
 
-print(sequence)
+#interface
 
 while(matching):
     print("Please enter the sequence.\n")
