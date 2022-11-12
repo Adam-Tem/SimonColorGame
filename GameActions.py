@@ -1,0 +1,37 @@
+from SequenceActions import *
+from UserActions import *
+from InterfaceFunctions import *
+
+def playGame():
+
+    sequence = createSequence()
+    matching = True
+    score = 0
+
+
+    while(matching):
+        print(sequence)
+        print("Please enter the sequence.\n")
+        for i in range(len(sequence)):
+            guess = inputColor()
+            if(sequence[i] != guess):
+                matching = False
+                break
+        if(matching):
+            score += 1
+            addToSequence(sequence)
+        else:
+            print("Unlucky, you entered the wrong sequence!\n")
+            print(f"Correct sequence streak: {score} \n")
+            print("Thanks for playing.")
+
+def hello():
+    print("Hello")
+
+#def selectColor():
+
+
+
+
+
+

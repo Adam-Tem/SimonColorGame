@@ -1,28 +1,8 @@
-from SequenceActions import *
-from UserActions import *
+from InterfaceFunctions import *
 
-sequence = createSequence()
-matching = True
-score = 0
+game_page = createScreen()
 
-#interface
-
-while(matching):
-    print("Please enter the sequence.\n")
-    for i in range(len(sequence)):
-        guess = inputColor()
-        if(sequence[i] != guess):
-            matching = False
-            break
-    if(matching):
-        score += 1
-        addToSequence(sequence)
-    else:
-        print("Unlucky, you entered the wrong sequence!\n")
-        print(f"Correct sequence streak: {score} \n")
-        print("Thanks for playing.")
-
-
-
+game_page.mainloop()
+widget_list = game_page.winfo_children()
 
 
