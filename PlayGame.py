@@ -1,4 +1,5 @@
 from SequenceActions import *
+from UserActions import *
 
 sequence = createSequence()
 matching = True
@@ -9,7 +10,7 @@ print(sequence)
 while(matching):
     print("Please enter the sequence.\n")
     for i in range(len(sequence)):
-        guess = input()
+        guess = inputColor()
         if(sequence[i] != guess):
             matching = False
             break
